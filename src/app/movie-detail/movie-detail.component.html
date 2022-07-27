@@ -1,0 +1,18 @@
+<div class="card" *ngIf="movie">
+    <div class="card-body">
+        <span class="badge bg-warning text-dark">id:{{movie.id}} name:{{movie.name}}</span>
+        <div class="input-group my-3">
+            <label for="name"></label>
+            <input type="text" class="form-control" [(ngModel)]="movie.name">
+        </div>
+        <div class="input-group my-3">
+            <label for="imgUrl"></label>
+            <input type="text" class="form-control" [(ngModel)]="movie.imgUrl">
+        </div>
+        <div class="input-group my-3">
+            <label for="description"></label>
+            <textarea class="form-control" [(ngModel)]="movie.description"></textarea>
+        </div>
+        <button (click)="Save()" class="btn btn-primary btn-sm">Save Changes</button>
+    </div>
+</div>

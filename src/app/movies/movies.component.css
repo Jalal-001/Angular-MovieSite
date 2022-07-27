@@ -1,0 +1,10 @@
+.close{
+    position:absolute ;
+    cursor: pointer;
+    right: 10px;
+    font-size: 20px;
+}
+.close:hover{
+    color: red;
+
+}
