@@ -9,12 +9,8 @@ import { MovieService } from "../movie.service";
 })
 export class MoviesComponent{
     title='Movies List';
-    movies:any; //movieDataSource
-    // selectedMovie:any; //detail-e buradan import edilir.
-    // onSelect(movie:Movie):void{
-    //     this.selectedMovie=movie;
-    // }
-    
+    movies:any;
+   
     ngOnInit(): void {
         this.callMovies();
     }
@@ -26,8 +22,7 @@ export class MoviesComponent{
     callMovies():void{
         //getMovies-den gelen deyer ötürülür 'movies'-e
         this.movieService.getMovies()
-        .subscribe(movies=>this.movies=movies)
-        ;
+        .subscribe(movies=>this.movies=movies);
     }
 
     Add(name:string,imgUrl:string,description:string):void{

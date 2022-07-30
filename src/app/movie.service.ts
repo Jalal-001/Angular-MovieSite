@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Movie } from './movie';
-
 import { Observable,of } from 'rxjs';
 import { LoggingService } from './logging.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -18,8 +17,7 @@ export class MovieService {
     ) { }
 
   getMovies():Observable<Movie[]>{
-    this.loggingService.add("");
-    return this.http.get<Movie[]>(this.apiMoviesUrl); //from movieDataSource
+    return this.http.get<Movie[]>(this.apiMoviesUrl);
   }
   getMovieID(id:number):Observable<Movie | undefined>{
     // id parametri routerLink vasitesile daxil olur

@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as movie from '../movie';
 import { MovieService } from '../movie.service';
 import { Location } from '@angular/common';
 
@@ -11,9 +10,8 @@ import { Location } from '@angular/common';
 })
 export class MovieDetailComponent implements OnInit {
 
-  @Input() movie:any; //@Input() -melumatin xaricden geleceyini bildirir.'moviesComponent'-den melumati aldigi ucun .
-
-
+  @Input() movie:any; //@Input() -melumatin xaricden geleceyini bildirir.'movie.service.ts'-den melumati aldigi ucun .
+  
   constructor(
     private movieService:MovieService,
     private route:ActivatedRoute,

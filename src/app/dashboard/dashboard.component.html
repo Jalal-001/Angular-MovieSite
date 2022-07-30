@@ -1,20 +1,20 @@
-<div class="card my-2" *ngFor="let movie of movies">
+<div class="card my-2" *ngFor="let movie2 of movies">
     <div class="row">
         <div class="col-3">
-            <img src="assets/img/{{movie.imgUrl}}" class="card-img">
+            <img src="assets/img/{{movie2.imgUrl}}" class="card-img">
         </div>
         <div class="col-9">
             <div class="card-body">
                 <h5 class="card-title">
-                    <a routerLink="/detail/{{movie.id}}">{{movie.name}}</a>
+                    <a routerLink="/detail/{{movie2.id}}">{{movie2.name}}</a>
                 </h5>
                 <p class="card-text">
-                    {{movie.description}}
+                    {{movie2.description}}
                 </p>
             </div>
         </div>
     </div>
 </div>
-<div *ngIf="movieLength>5">
+<div *ngIf="movieLength>6">
     <a routerLink="/movies" class="btn btn-primary my-2">More</a>
 </div>
